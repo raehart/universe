@@ -4,9 +4,9 @@ import axios from "axios";
 import './PostCard.scss';
 
 
-const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+const baseURL = "https://jsonplaceholder.typicode.com/posts/1/";
 
-export default function PostCard() {
+export default function PostCard(props) {
   let [post, setPost] = useState("");
   let [error, setError] = useState("");
 
@@ -14,9 +14,9 @@ export default function PostCard() {
     axios.get(baseURL).then((response) => {
       setPost(response.data);
       console.log(`post: ${post}`);
-    }).catch(error => {
-      setError(error);
-      console.log(`error: ${error}`);
+    }).catch(err => {
+      setError(err.);
+      console.log(`error: ${err}`);
     });
   }, []);
 
@@ -25,7 +25,8 @@ export default function PostCard() {
     <div className="post-card">
       <div className="c-card">
         <div role="separator" className="c-card__item c-card__item--divider">
-          <h2>{post ?  post.title : error}</h2>
+          <h2>{post && post.title}</h2>
+          <p>{error && error}</p>
         </div>
         <div className="c-card__item">
           <p className="c-paragraph">

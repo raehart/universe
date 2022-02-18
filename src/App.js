@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 import "./App.scss";
 import PostCard from "./components/PostCard";
+import CommentCard from "./components/CommentCard";
 
 
 
@@ -14,6 +15,7 @@ function App() {
           {/* homePage */}
           <Route path="/" element={<PostCard />}></Route>
           <Route path="/post-card" element={<PostCard />}></Route>
+          <Route path="/comment" element={<CommentCard />}></Route>
           {/* PostPage */}
           {/* Author Page */}
         </Routes>
