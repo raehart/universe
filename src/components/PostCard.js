@@ -15,7 +15,7 @@ export default function PostCard(props) {
       setPost(response.data);
       console.log(`post: ${post}`);
     }).catch(err => {
-      setError(err.);
+      setError(err.message);
       console.log(`error: ${err}`);
     });
   }, []);
