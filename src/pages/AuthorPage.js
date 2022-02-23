@@ -12,7 +12,7 @@ export default function AuthorPage() {
 
   return (
     <>
-      <Link to="/" className="home-btn">Back to Home</Link>
+      <Link to="/">Back to Home</Link>
       <h1>Posts By: User {params.id}</h1>
       {posts && posts.map((post, index) => {
         return <PostList posts={posts} key={index}/>
