@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
-import "./App.scss";
+import "./styles/App.scss";
 import { PostsContext } from "./contexts/PostsContext";
 import PostPage from "./pages/PostPage";
 import AuthorPage from "./pages/AuthorPage";
@@ -17,7 +17,6 @@ function App() {
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
       setPosts(response.data);
-      console.log(`posts: ${posts}`);
     }).catch(err => {
       setError(err.message || 'ERROR');
       console.log(`error: ${err}`);

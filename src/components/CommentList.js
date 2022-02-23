@@ -6,7 +6,7 @@ export default function CommentList({comments}) {
   return (
       <div className="comment-list">
         <div>List of All Comments</div>
-        {comments.map((comment, index) => {
+        {comments && comments.map((comment, index) => {
           return <CommentCard key={index} comment={comment}/>
         })}
       </div>

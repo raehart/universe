@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { PostsContext } from "../contexts/PostsContext";
-
 import PostCard from "./PostCard";
 
 export default function PostList() {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import './PostCard.scss';
+import '../styles/PostCard.scss';
 
 export default function PostCard({post}) {
   return (
