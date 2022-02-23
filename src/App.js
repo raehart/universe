@@ -6,8 +6,7 @@ import "./App.scss";
 import { PostsContext } from "./contexts/PostsContext";
 import PostPage from "./pages/PostPage";
 import AuthorPage from "./pages/AuthorPage";
-import PostList from "./components/PostList";
-import CommentCard from "./components/CommentCard";
+import HomePage from "./pages/HomePage";
 
 function App() {
   const baseURL = "https://jsonplaceholder.typicode.com/posts/";
@@ -30,7 +29,7 @@ function App() {
       <PostsContext.Provider value={{posts, setPosts, error, setError}}>
         <Router>
           <Routes>
-            <Route path="/" element={<PostList />}></Route>
+            <Route path="/" element={<HomePage />}></Route>
             <Route path="/post/:id" element={<PostPage />}></Route>
             <Route path="/author/:id" element={<AuthorPage/>} ></Route>
           </Routes>

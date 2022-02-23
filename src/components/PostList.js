@@ -12,7 +12,10 @@ export default function PostList() {
       {error && <div className="post-list-error">{error.message}</div>}
       {posts.map((post, index) => {
         return (
-          <Link to={`/post/${post.id}`} key={index} style={{textDecoration: 'none'}}>
+          <Link
+            to={`/post/${post.id}`}
+            key={index}
+            style={{textDecoration: 'none', display: 'block'}}>
             <PostCard post={post} />
           </Link>
         );
