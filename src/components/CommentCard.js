@@ -1,21 +1,23 @@
 import React from "react";
 
-export default function CommentCard() {
+import '../styles/CommentCard.scss';
+
+
+export default function CommentCard({comment}) {
 
   return (
-    // map over all comments
     <div className="comment-card">
       <div className="c-card c-card--grouped">
         <div className="c-card__item">
-          Commenter Name
+          <h4>{comment.name}</h4>
         </div>
 
         <div className="c-card__item">
-          Commenter Email
+          {comment.email}
         </div>
         <div role="separator" className="c-card__divider"></div>
         <div className="c-card__item">
-          Commenter Comment
+          {comment.body}
         </div>
       </div>
     </div>
