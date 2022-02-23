@@ -1,7 +1,19 @@
+@import 'colors.scss';
+
 .post-list, .post-detail, .comment-list {
   max-width: 50rem;
   margin: 2rem auto;
 }
+
+h1, h3 {
+  color: $aqua; 
+}
 h1, h2, h3, h4 {
   text-align: center;
+}
+
+.c-card__item {
+  h2, h4 {
+    color: $purple;
+  }
 }

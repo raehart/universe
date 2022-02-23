@@ -4,7 +4,7 @@ import '../styles/PostCard.scss';
 
 export default function PostCard({post}) {
   return (
-    <div className="post-card">
+    <div className="post-card u-higher">
       <div className="c-card">
         <div role="separator" className="c-card__item c-card__item--divider">
           <h2>{post && post.title}</h2>

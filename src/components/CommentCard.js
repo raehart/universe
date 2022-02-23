@@ -6,7 +6,7 @@ import '../styles/CommentCard.scss';
 export default function CommentCard({comment}) {
 
   return (
-    <div className="comment-card">
+    <div className="comment-card u-high">
       <div className="c-card c-card--grouped">
         <div className="c-card__item">
           <h4>{comment.name}</h4>
