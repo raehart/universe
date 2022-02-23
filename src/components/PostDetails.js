@@ -27,7 +27,9 @@ export default function PostDetails({ post }) {
       <h1>Post Details</h1>
       <PostCard post={post} />
       <Link to={`/author/${post.userId}`}>Read More by Author</Link>
+
       <CommentList comments={comments} />
+     { error && error }
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function CommentCard({comment}) {
           <h4>{comment.name}</h4>
         </div>
 
-        <div className="c-card__item">
+        <div className="c-card__item c-heading__sub">
           {comment.email}
         </div>
         <div role="separator" className="c-card__divider"></div>
